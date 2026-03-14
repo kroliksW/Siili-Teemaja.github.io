@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>ESILEHT</title>
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+/* Функция увеличивает индекс на 1, показывает следующий слайд*/
+function plusSlide() {
+    showSlides(slideIndex += 1);
+}
+
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+    showSlides(slideIndex -= 1);  
+}
+
+/* Устанавливает текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+/* Основная функция слайдера */
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slider-item");
+    var dots = document.getElementsByClassName("slider-dots_item");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+setInterval(plusSlide,1000);
+
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="page">
+
+<div id="header">
+<a href="index.html"><div class="nuppleft"><p class="nupptext">Tagasi üles</p></div></a>
+<a href="#map"><div class="nuppleft"><p class="nupptext">Asukoht</p></div></a>
+<div id="logo"></div>
+<a href="#Joogid"><div class="nuppright"><p class="nupptext">Joogid</p></div></a>
+<a href="#Magustoidud"><div class="nuppright"><p class="nupptext">Magustoidud</p></div></a>
+</div>
+
+<div id="slider-block">
+	<div id="slider-block-content">
+		<h1>Siili Teemaja</h1><br>
+		<p>"Pehme süda okkalises kestas."</p>
+	</div>
+	<div class="slider">
+	<div class="slider-item"><img src="maja.png" alt="esimene slaid"></div>
+	<div class="slider-item"><img src="tee.png" alt="teine slaid"></div>
+	<div class="slider-item"><img src="toit.png" alt="kolmass slaid"></div>
+	<a class="prev" onclick="minusSlide()">❮</a> <a class="next" onclick="plusSlide()">❯</a></div>
+</div>
+
+<div id="content-block">
+<p>"Maailmas, kus kõik pidevalt kiirustavad, kutsub meie siil teid korraks peatuma. Siili Teemaja on vaikuse saar.<span id="Joogid">
+</span> Meil ei ole ruttu, on vaid haruldaste teede aroom ja armastusega valmistatud kodused magustoidud."</p>
+</div>
+
+<div id="menu">
+<div class="menu-block">
+<div class="text-item"><h3>Joogimenüü</h3></div>
+
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Must tee</h4>
+            <p>250 ml</p>
+        </div>
+        <div class="price">2.50 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Roheline tee</h4>
+            <p>250 ml</p>
+        </div>
+        <div class="price">2.50 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Jasmiini tee</h4>
+            <p>250 ml</p>
+        </div>
+        <div class="price">2.80 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Kummeli tee</h4>
+            <p>250 ml</p>
+        </div>
+        <div class="price">2.50 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Kummeli & Mee Tee</h4>
+            <p>250 ml</p>
+        </div>
+        <div class="price">3.20 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Jasmiini Roheline Tee</h4>
+            <p>250 ml</p>
+        </div>
+        <div class="price">3.50 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Jäätee sidruniga</h4>
+            <p>350 ml</p>
+        </div>
+        <div class="price">3.00 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Jäätee virsikuga</h4>
+            <p>350 ml</p>
+        </div>
+        <div class="price">3.00 €</div>
+    </div>
+
+<div class="menu-item">
+        <div class="item-info">
+            <h4>Marja Jäätee</h4>
+            <p>350 ml</p>
+        </div>
+        <div class="price">3.60 €</div>
+		<span id="Magustoidud">
+</span>
+    </div>
+	
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Assam Gold Tee</h4>
+            <p>250 ml</p>
+        </div>
+        <div class="price">3.40 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Earl Grey Supreme</h4>
+            <p>250 ml</p>
+        </div>
+        <div class="price">3.20 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Valge Tee "Silver Needle"</h4>
+            <p>250 ml</p>
+        </div>
+        <div class="price">4.50 €</div>
+    </div>
+	
+</div>
+<div class="menu-block">
+<div class="text-item"><h3>Magustoidumenüü</h3></div>
+
+<div class="menu-item">
+        <div class="item-info">
+            <h4>Šokolaadi Fondant</h4>
+            <p>tume šokolaad, või, muna, vanill</p>
+        </div>
+        <div class="price">5.50 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Matcha Juustukook</h4>
+            <p>toorjuust, matcha, küpsisepõhi, koor</p>
+        </div>
+        <div class="price">5.80 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Tiramisu Klassika</h4>
+            <p>mascarpone, kohv, kakao, küpsised</p>
+        </div>
+        <div class="price">5.60 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Mee Kook</h4>
+            <p>mesi, hapukoor, kihiline tainas</p>
+        </div>
+        <div class="price">5.50 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Mustika Juustukook</h4>
+            <p>toorjuust, mustikad, küpsisepõhi</p>
+        </div>
+        <div class="price">5.40 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Šokolaadi Brownie</h4>
+            <p>tume šokolaad, kakao, või</p>
+        </div>
+        <div class="price">4.90 €</div>
+    </div>
+
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Šokolaadi Lava Kook</h4>
+            <p>tume šokolaad, või, muna, suhkur</p>
+        </div>
+        <div class="price">5.70 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Sidruni Tart</h4>
+            <p>sidrunikreem, või, muna, liivatainas</p>
+        </div>
+        <div class="price">5.20 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Maasika Panna Cotta</h4>
+            <p>koor, vanill, maasikas</p>
+        </div>
+        <div class="price">5.30 €</div>
+		<span id="map">
+</span>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Karamelli Juustukook</h4>
+            <p>toorjuust, karamell, küpsisepõhi</p>
+        </div>
+        <div class="price">5.60 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Õuna Kaneelikook</h4>
+            <p>õun, kaneel, või, tainas</p>
+        </div>
+        <div class="price">4.90 €</div>
+    </div>
+	
+	<div class="menu-item">
+        <div class="item-info">
+            <h4>Šokolaadi Trühvlid</h4>
+            <p>tume šokolaad, koor, kakao</p>
+        </div>
+        <div class="price">4.70 €</div>
+    </div>
+</div>
+<div class="menu-block">
+<div class="text-item"><h3>Asukoht</h3></div>
+<iframe name="frame" id="frame" src="https://www.google.com/maps?q=59.374831,28.192448&z=15&output=embed"></iframe>
+</div>
+</div>
+
+<div id="footer">
+<div class="block1">
+<a href="#"><p>Karjäär</p></a><br>
+<a href="#"><p>Kontakt</p></a><br>
+<a href="#"><p>Privatsuspoliitika</p></a><br>
+<a href="#"><p>Allergenid</p></a>
+</div>
+<div class="block2">
+<p>Siili Teemaja</p><br>
+<p>E-R 06.00-21.00</p><br>
+<p>L-P 06-12.00</p>
+</div>
+<div class="block3">
+<p>Ettevõte: Siili Teemaja OÜ</p><br>
+<p>Registrikood: 12345678</p><br>
+<p>KMKR nr: EE109876543</p><br>
+<p>E-post: info@siiliteemaja.ee</p>
+</div>
+<div class="copyright-notice">
+<p>© 2026 Siili Teemaja. All rights reserved.</p>
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
