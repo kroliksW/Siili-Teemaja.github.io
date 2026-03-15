@@ -37,10 +37,9 @@
 h1{
 	font-family:sans;
 }
-h3{
+h2{
 	font-family:sans;
 	font-size:23px;
-	
 }
 body{
 	font-family:sans-serif;
@@ -92,7 +91,7 @@ img {
 .menu-item p{
 	width:200px;
 }
-.item-info h4 {
+.item-info h3 {
 	padding-top:20px;
 	margin-left:10px;
 	color:white;
@@ -132,6 +131,13 @@ color: white;
 .link{
 	text-decoration: none;
 }
+h2{
+	font-family:sans;
+	font-size:23px;
+	padding-top:20px;
+	text-align:center;
+	color:white;
+}
 .text-item{
 	margin:auto;
 	width:90%;
@@ -139,11 +145,6 @@ color: white;
 	background-color:#5a3726;
 	box-shadow: 0 8px 20px rgba(45, 20, 0, 0.3);
 	border-radius:10px;
-}
-.text-item h3{
-	padding-top:20px;
-	text-align:center;
-	color:white;
 }
 #header{
 	margin-top:-50px;
@@ -227,10 +228,6 @@ color: white;
 	height:50px;
 	margin-left:10%;
 	margin-top:20px;
-}
-h2{
-	margin-bottom:5px;
-	text-align:center;
 }
 .slider{
 overflow: hidden;
